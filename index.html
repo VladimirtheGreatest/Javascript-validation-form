@@ -4,25 +4,41 @@
         <meta charset="utf-8">
         <title>RegEx Form</title>
         <link rel="stylesheet" href="styles.css">
+        <link href="https://fonts.googleapis.com/css?family=Cardo:400,700|Oswald" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
     </head>
-    <body>
-        <h1>New User Signup</h1>
-        <form>
+    <body>  
+        <form name="myForm" id="form" class="form"  method="post">
+            <div class="form-control">
             <label for="username">Username</label>
-            <input type="text" name="username" placeholder="Vladimir">
-            <p>Username must be  and contain 5 - 12 characters</p>
+            <input type="text" name="username" placeholder="Vladimir" required>
+            <small>Username must be  and contain 5 - 12 characters</small>
+            <i class="fas fa-check-circle"></i>
+			<i class="fas fa-exclamation-circle"></i>
+            </div>
+            <div class="form-control">
             <label for="username">E-mail</label>
-            <input type="text" name="email" placeholder="me@mydomain.com">
-            <p>Email must be a valid address, e.g. me@mydomain.com</p>
+            <input type="text" name="email" placeholder="me@mydomain.com" required>
+            <small>Email must be a valid address, e.g. me@mydomain.com</small>
+            <i class="fas fa-check-circle"></i>
+			<i class="fas fa-exclamation-circle"></i>
+            </div>
+            <div class="form-control">
             <label for="username">Password</label>
-            <input type="password" name="password" placeholder="password123">
-            <p>Password must alphanumeric (@, _ and - are also allowed) and be 8 - 20 characters</p>
+            <input type="password" name="password" placeholder="password123" required>
+            <small>Password must have and be 8 - 20 characters</small>
+            <i class="fas fa-check-circle"></i>
+			<i class="fas fa-exclamation-circle"></i>
+            </div>
+            <div class="form-control">
             <label for="username">Telephone</label>
-            <input type="text" name="telephone" placeholder="07532324124">
-            <p>Telephone must be a valid UK telephone number (11 digits)</p>
-            <label for="username">Slug</label>
-            <input type="text" name="slug" placeholder="thisisslug">
-            <p>Slug must contain only lowercase letters, numbers and hyphens and be 8 - 20 characters</p>
+            <input type="text" name="telephone" placeholder="07532324124" required>
+            <small>Telephone must be a valid UK telephone number (11 digits)</small>
+            <i class="fas fa-check-circle"></i>
+			<i class="fas fa-exclamation-circle"></i>
+            </div>
+            <button type="submit" value="Submit">Submit</button>
         </form>
         <script type="text/javascript" src="validation.js"></script>
     </body>
